@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sesion2_TallerInnovacion</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; color: #333; line-height: 1.6; }
+        .container { max-width: 1000px; margin: auto; padding: 20px; }
+        .header { background-color: #2196F3; color: white; text-align: center; padding: 10px; } /* Color de acento azul */
+        .activity, .overview { margin-bottom: 20px; }
+        .banner {
+            background-color: #2196F3; /* Color de acento azul */
+            color: white;
+            padding: 10px;
+            cursor: pointer;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        .content { display: none; padding: 10px; border: 1px solid #ddd; margin-bottom: 10px; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+            vertical-align: top;
+        }
+        th {
+             background-color: #f9f9f9;
+        }
+        span[style*="color: red;"] {
+            font-weight: bold;
+        }
+        ul { margin-top: 0; padding-left: 20px; }
+        li { margin-bottom: 5px; }
+        hr.divider { border: none; border-top: 1px solid #e0e0e0; margin: 5px 0; }
+        .subtitle { margin-top: 5px; font-size: 0.9em; color: #e0e0e0; }
+        .time-title { margin-top: 0; margin-bottom: 20px; font-size: 1.2em; color: #555; text-align: center;}
+    </style>
+    <script>
+        function toggleContent(id) {
+            const content = document.getElementById(id);
+            if (content) {
+                content.style.display = content.style.display === "none" ? "block" : "none";
+            }
+        }
+
+        window.onload = () => {
+             // Optional: Keep all content visible initially
+             // document.querySelectorAll('.content').forEach(el => el.style.display = 'block');
+        };
+    </script>
+</head>
+<body>
+    <div class="header">
+        <h1>Taller: ¡Misión Posible! 1.3 - Robótica al Rescate del Planeta (Sesión 2)</h1>
+    </div>
+    <div class="container">
+        <h2 class="time-title">Tiempo Total Estimado: 40 minutos</h2>
+
+        <!-- De un Vistazo -->
+        <div id="overview-section" class="overview" data-time="N/A">
+             <div class="banner" onclick="toggleContent('overview_content')">
+                 <div class="title">📝 De un Vistazo: Sesión 2</div>
+                  <hr class="divider">
+                 <div class="subtitle">Resumen rápido de objetivos, materiales y preparación para el facilitador.</div>
+             </div>
+             <div id="overview_content" class="content">
+                 <table>
+                     <tr>
+                         <th style="width: 50%;">Objetivos, Tácticas y Entregable</th>
+                         <th style="width: 50%;">Materiales Específicos y Preparación Previa</th>
+                     </tr>
+                     <tr>
+                         <td>
+                            <strong>Objetivos:</strong>
+                            <ul>
+                                <li>Recordar el problema ODS definido ("Código de la Misión").</li>
+                                <li><span style='color: red; font-weight: bold;'>Táctica 2:</span> Crear un "Mapa de Historia Humana" (Human Story Map) para empatizar profundamente con la experiencia de alguien afectado por el problema ODS elegido. Identificar sus actividades, tareas, frustraciones y necesidades no cubiertas.</li>
+                             </ul>
+                            <strong>Tácticas Principales:</strong>
+                            <ul>
+                                <li><span style='color: red; font-weight: bold;'>Human Story Map</span> (Adaptado: Conectando con el Corazón Humano de la Misión).</li>
+                            </ul>
+                            <strong>Entregable Clave:</strong>
+                            <ul>
+                                <li>"Mapa de Historia Humana" por equipo (en Miro o similar) detallando la experiencia del "héroe" afectado por su problema ODS.</li>
+                            </ul>
+                         </td>
+                         <td>
+                            <strong>Materiales Específicos:</strong>
+                            <ul>
+                                <li>Proyector o pantalla interactiva.</li>
+                                <li>Presentación de diapositivas (Diapositivas 12-15 detalladas abajo).</li>
+                                <li>Acceso a tablero Miro (o similar) con el "Código de la Misión" (WWWWhy) visible y espacio/plantilla para el Human Story Map, O rotafolios/papel grande.</li>
+                                <li>Marcadores o herramientas de escritura/dibujo digital.</li>
+                                <li>Ejemplo "BeBot/Sofía" para Human Story Map (Diapositiva 14).</li>
+                            </ul>
+                             <strong>Preparación Previa para ESTA Sesión:</strong>
+                             <ol>
+                                 <li><strong>Presentación Lista:</strong> Tener listas las Diapositivas 12 a 15. Asegurarse de que el ejemplo del Human Story Map de Sofía/BeBot sea claro y siga la estructura.</li>
+                                 <li><strong>Plantillas Human Story Map:</strong> Preparar plantillas (digitales o físicas) con las secciones: Hero+Need, Activities, Tasks, Details/Pain Points, Questions/Concerns.</li>
+                                 <li><strong>Espacio de Trabajo:</strong> Equipos deben tener acceso a su "Código de la Misión" (WWWWhy) de la Sesión 1.</li>
+                             </ol>
+                         </td>
+                     </tr>
+                 </table>
+             </div>
+         </div>
+
+        <!-- Actividad 1: Recapitulación Sesión 1 -->
+        <div id="activity-1" class="activity" data-time="5">
+            <div class="banner" onclick="toggleContent('activity_1_content')">
+                <div class="title">⏪ Actividad 1: Recapitulación de la Sesión 1: Recordando Nuestra Misión ⏰ Tiempo: 5 minutos</div>
+                <hr class="divider">
+                <div class="subtitle">Conectar con la sesión anterior y preparar el terreno para la empatía.</div>
+            </div>
+            <div id="activity_1_content" class="content">
+                <table>
+                    <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar Diapositiva 12.
+                        </td>
+                        <td>
+                            "¡Agentes de 'Misión Posible', recargando energías para la Sesión 2! ⚡️ ¡Bienvenidos de nuevo a nuestra misión secreta! En la sesión anterior, descifraron el importante <span style='color: red; font-weight: bold;'>'Código de la Misión'</span>: eligieron un problema ODS crucial y, usando la táctica WWWWhy, entendieron <span style='color: red; font-weight: bold;'>Quién</span> lo sufre, <span style='color: red; font-weight: bold;'>Qué</span> es exactamente, <span style='color: red; font-weight: bold;'>Dónde</span> pasa y <span style='color: red; font-weight: bold;'>Por qué</span> les importa tanto."
+                            <br><br>
+                            "Den una mirada rápida a sus tableros (Miro/papel). Recuerden a ese <span style='color: red; font-weight: bold;'>'Quién'</span> que identificaron. Puede ser una persona, un animal, ¡incluso una planta! Hoy, vamos a usar nuestra segunda herramienta secreta para entender *exactamente* cómo se siente ese ser afectado por el problema. ¡Hoy nos ponemos en los zapatos de quienes sufren el problema! ¡Activaremos nuestra <span style='color: red; font-weight: bold;'>Empatía Robótica</span>!" ❤️🤖
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 2: Táctica 2: Human Story Map -->
+        <div id="activity-2" class="activity" data-time="30">
+            <div class="banner" onclick="toggleContent('activity_2_content')">
+                <div class="title">🗺️ Actividad 2: Táctica 2: Human Story Map (Adaptado) - Conectando con el Corazón Humano (o Natural) de la Misión ⏰ Tiempo: 30 minutos</div>
+                <hr class="divider">
+                <div class="subtitle">Aplicar la táctica Human Story Map para profundizar en la empatía.</div>
+            </div>
+            <div id="activity_2_content" class="content">
+                <table>
+                    <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1 (5 min):</strong> Proyectar Diapositiva 13. Introducir la Táctica 2 y sus elementos.
+                        </td>
+                        <td>
+                            "¡Agentes, saquen sus lupas de empatía! 🔍❤️ Vamos a usar la táctica <span style='color: red; font-weight: bold;'>'Human Story Map'</span> (Mapa de Historia Humana). Es como dibujar el mapa de la vida diaria de alguien (o algo) que sufre el problema de nuestra misión. Es un 'mapa' para entender la historia y las emociones de nuestro 'héroe' afectado, poniéndonos realmente en su lugar."
+                            <br><br>
+                            "Miren la Diapositiva 13. Este mapa tiene varias partes importantes que llenaremos juntos:"
+                            <ul>
+                                <li><strong>Hero + Larger Need (Héroe + Necesidad Mayor):</strong> ¿Quién es nuestro héroe específico? ¿Cuál es su necesidad más grande que no se cumple por el problema?</li>
+                                <li><strong>Activities (Actividades):</strong> ¿Qué cosas hace normalmente nuestro héroe en su día?</li>
+                                <li><strong>Tasks (Tareas):</strong> Dentro de una actividad importante, ¿qué pasos pequeños sigue?</li>
+                                <li><strong>Details, Options, Alternatives... (Detalles/Pain Points):</strong> ¡Aquí está la clave! En esos pasos, ¿qué problemas, frustraciones o dolores (Pain Points) encuentra por culpa del problema ODS?</li>
+                                <li><strong>Questions and Concerns (Preguntas y Preocupaciones):</strong> Al ver sus problemas, ¿qué preguntas o preocupaciones nos surgen a nosotros como agentes?</li>
+                            </ul>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                             <strong>Paso 2 (20 min):</strong> Guiar el llenado del mapa por equipos. Facilitar la identificación de 'Pain Points'.
+                         </td>
+                         <td>
+                            "¡Manos a la obra, agentes empáticos! ¡Trabajen en equipo! Llenen su Mapa de Historia Humana en Miro/papel. ¡Pónganse en los zapatos (o aletas, o raíces) de su héroe!"
+                            <br><br>
+                            <em>(Guiar paso a paso el llenado, dando tiempo para cada sección y circulando para ayudar):</em>
+                            <br>
+                            "<strong>Primero (Hero + Need):</strong> Elijan a UN 'Héroe' específico afectado. ¿Es la tortuga Tina? ¿El niño Leo que vive cerca de la fábrica? ¿El árbol viejo del parque? ¡Pónganle un nombre! ¿Y cuál es su <span style='color: red; font-weight: bold;'>necesidad más grande</span> que el problema le impide cumplir? (Ej: 'Tina necesita llegar al mar sin enredarse en plástico')."
+                            <br>
+                            "<strong>Segundo (Activities):</strong> ¿Qué cosas hace normalmente este 'héroe' en su día? (Ej: 'Tina nada, busca comida, pone huevos en la arena'). ¡Hagan una lista!"
+                            <br>
+                            "<strong>Tercero (Tasks):</strong> Elijan UNA actividad importante (Ej: 'Poner huevos') y piensen: ¿qué <span style='color: red; font-weight: bold;'>pasos pequeños</span> sigue para hacerla? (Ej: 'Salir del agua, buscar lugar seguro, cavar nido, poner huevos, tapar, volver al mar')."
+                            <br>
+                            "<strong>Cuarto (Details/Pain Points):</strong> ¡Aquí está la clave, agentes! En esos pasos pequeños... ¿qué <span style='color: red; font-weight: bold;'>problemas o frustraciones</span> encuentra por culpa de la basura, la contaminación, etc.? ¿Qué le molesta? ¿Qué le pone triste o en peligro? ¡Encuentren los 'Pain Points'! (Ej: 'Buscar lugar seguro: ¡Hay botellas rotas! ¡La gente la asusta! Cavar nido: ¡Hay plásticos enterrados!'). ¡Sean muy específicos!"
+                            <br>
+                            "<strong>Quinto (Questions/Concerns):</strong> Al ver sus problemas... ¿qué <span style='color: red; font-weight: bold;'>preguntas</span> nos hacemos nosotros? ¿Qué nos preocupa? ¿Cómo podría un robot ayudar JUSTO AHÍ? (Ej: '¿Podría un robot limpiar el camino de Tina? ¿Podría detectar la basura enterrada?')."
+                            <br><br>
+                            <em>(Dar tiempo amplio para la discusión y llenado. Circular mucho, ayudar a concretar las frustraciones y a generar preguntas que conecten con posibles soluciones robóticas).</em>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 3 (5 min):</strong> Proyectar Diapositiva 14. Mostrar y explicar brevemente el ejemplo BeBot/Sofía. Reforzar la importancia de los 'Pain Points'.
+                        </td>
+                        <td>
+                            "Para que se inspiren, miren el ejemplo de <span style='color: red; font-weight: bold;'>BeBot</span> y la niña <span style='color: red; font-weight: bold;'>Sofía</span> en la Diapositiva 14. El equipo mapeó su historia: su <span style='color: red; font-weight: bold;'>necesidad</span> era disfrutar la playa, sus <span style='color: red; font-weight: bold;'>actividades</span> (jugar, bañarse), las <span style='color: red; font-weight: bold;'>tareas</span> (buscar lugar)... ¡y encontraron los <span style='color: red; font-weight: bold;'>problemas (Pain Points)</span>! La basura le impedía encontrar un lugar limpio. Le frustraba tener que limpiar antes de jugar y encontrar cosas asquerosas. Eso les hizo <span style='color: red; font-weight: bold;'>preguntarse</span>: ¿Y si un robot limpiara la playa por ella? ¡Como BeBot!"
+                            <br><br>
+                            "¡Ahora completen ustedes el mapa de Su héroe! ¡Encuentren esos 'Pain Points'!"
+                            <br><br>
+                            <em>(Asegurarse de que los equipos capturen el entregable).</em>
+                             <br><br>
+                            <strong>Consejo Maestro:</strong> La sección clave es "Details/Pain Points". Ayúdales a identificar frustraciones concretas. Las "Questions/Concerns" son el puente hacia la ideación de robots en la siguiente sesión.
+                            <br><br>
+                            <strong>Entregable:</strong> "Mapa de Historia Humana" por equipo (digital o físico) detallando la experiencia del "héroe" afectado.
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+        <!-- Actividad 3: Cierre Sesión 2 -->
+        <div id="activity-3" class="activity" data-time="5">
+            <div class="banner" onclick="toggleContent('activity_3_content')">
+                <div class="title">🏁 Actividad 3: Cierre de la Sesión 2: Empatía Activada, ¡Listos para la Acción Robótica! ⏰ Tiempo: 5 minutos</div>
+                <hr class="divider">
+                <div class="subtitle">Consolidar el aprendizaje de empatía y anticipar la ideación.</div>
+            </div>
+            <div id="activity_3_content" class="content">
+                <table>
+                    <tr>
+                        <th style="width: 50%;">Acción</th>
+                        <th style="width: 50%;">Diálogo Maestro</th>
+                    </tr>
+                    <tr>
+                        <td>
+                            <strong>Paso 1:</strong> Proyectar Diapositiva 15. Realizar el cierre motivacional.
+                        </td>
+                        <td>
+                            "¡Agentes secretos con corazones gigantes! ❤️ Hoy se han convertido en verdaderos expertos en empatía robótica, creando 'Mapas de Historia Humana' conmovedores. Han conectado con las emociones y necesidades de las personas (¡o seres!) afectadas por los problemas ambientales. ¡Impresionante!"
+                             <br><br>
+                            "Han sentido sus frustraciones (los 'Pain Points'), han entendido sus necesidades. ¡Esa empatía es el combustible perfecto para nuestra creatividad! 🚀 Es lo que necesitamos para inventar robots que realmente ayuden."
+                             <br><br>
+                             "En la próxima sesión, ¡vamos a usar esa empatía para la <span style='color: red; font-weight: bold;'>'Force 25'</span>! 💡 Será una lluvia de ideas robóticas súper rápida donde vamos a generar montones de soluciones con Cutebot y Micro:bit para ayudar a SU héroe. ¡La acción robótica está por comenzar!"
+                            <br><br>
+                            "Revisen sus Mapas de Historia Humana, sientan la misión... ¡y prepárense para transformar esa empatía en ideas robóticas increíbles! ¡Nos vemos en la Sesión 3, agentes de cambio empáticos!"
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+
+    </div> <!-- Cierre del container -->
+</body>
+</html>
